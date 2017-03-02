@@ -5,6 +5,9 @@
 *.list
 *.swp
 *.bak
+*.png
+*.csv
+*.txt
 benchmark_clock_gettime
 time_test_avx
 time_test_avxunroll

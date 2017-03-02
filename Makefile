@@ -37,5 +37,11 @@ gencsv: default
 		./benchmark_clock_gettime $$i; \
 	done > result_clock_gettime.csv	
 
+plot: default
+	for i in `seq 10000 5000 1000000`; do \
+		printf "%d," $$i;\
+		./benchmark_clock_gettime $$i; \
+	done > time_data.txt
+	gnuplot scripts/plot.gp
 clean:
 	rm -f $(EXECUTABLE) *.o *.s result_clock_gettime.csv
