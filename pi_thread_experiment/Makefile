@@ -19,7 +19,7 @@ default : pi_thread.o
 	$(CC) $(CFLAGS) pi_thread.o main.c -DSIMPLEMP -o simplemp
 	$(CC) $(CFLAGS) pi_thread.o main.c $(ENABLE_ALL) -o test_all
 
-pi_thread.oi : pi_thread.c
+pi_thread.o : pi_thread.c
 	$(CC) -c $(CFLAGS) pi_thread.c -o pi_thread.o
 
 plot : default
